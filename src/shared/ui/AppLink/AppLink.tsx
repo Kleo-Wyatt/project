@@ -5,7 +5,8 @@ import { FC } from 'react'
 
 export enum AppLinkTheme {
   PRIMARY = 'primary',
-  SECONDARY = 'secondary',
+  INVERTED = 'inverted'
+  // SECONDARY = 'secondary',
 }
 
 interface AppLinkProps extends LinkProps {
