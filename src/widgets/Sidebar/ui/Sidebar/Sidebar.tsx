@@ -1,4 +1,3 @@
-import styles from './Sidebar.module.scss';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useState } from 'react';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
@@ -10,6 +9,7 @@ import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 
 import MainIcon from 'shared/assets/icons/main-20-20.svg';
 import AboutIcon from 'shared/assets/icons/about-20-20.svg';
+import styles from './Sidebar.module.scss';
 
 interface SidebarProps {
     className?: string;
@@ -24,7 +24,7 @@ export const Sidebar = ({ className }: SidebarProps) => {
     };
     return (
         <div
-            data-testid='sidebar'
+            data-testid="sidebar"
             className={classNames(
                 styles.Sidebar,
                 { [styles.collapsed]: collapsed },
@@ -36,7 +36,7 @@ export const Sidebar = ({ className }: SidebarProps) => {
                 square
                 theme={ButtonTheme.BACKGROUND_IVERTED}
                 className={styles.collapseBtn}
-                data-testid='sidebar-toggle'
+                data-testid="sidebar-toggle"
                 onClick={onToggle}
             >
                 {collapsed ? '>' : '<'}
@@ -48,7 +48,10 @@ export const Sidebar = ({ className }: SidebarProps) => {
                     to={RoutePath.main}
                 >
                     <MainIcon className={styles.icon} />
-                    <span className={styles.link}> {t('Главная')}</span>
+                    <span className={styles.link}>
+                        {' '}
+                        {t('Главная')}
+                    </span>
                 </AppLink>
                 <AppLink
                     className={styles.item}
@@ -56,7 +59,10 @@ export const Sidebar = ({ className }: SidebarProps) => {
                     to={RoutePath.about}
                 >
                     <AboutIcon className={styles.icon} />
-                    <span className={styles.link}> {t('О сайте')}</span>
+                    <span className={styles.link}>
+                        {' '}
+                        {t('О сайте')}
+                    </span>
                 </AppLink>
             </div>
             <div className={styles.switchers}>

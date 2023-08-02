@@ -1,8 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
-
-import { Button, ButtonSize, ButtonTheme } from './Button';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
+import { Button, ButtonSize, ButtonTheme } from './Button';
 
 const meta: Meta<typeof Button> = {
     title: 'shared/Button',
@@ -25,11 +24,18 @@ export const Clear: Story = {
     },
 };
 
+export const ClearInverted: Story = {
+    args: {
+        children: 'Text',
+        theme: ButtonTheme.CLEAR_INVERTED,
+    },
+};
+
 export const Outline: Story = {
-  args: {
-      children: 'Text',
-      theme: ButtonTheme.OUTLINE,
-  },
+    args: {
+        children: 'Text',
+        theme: ButtonTheme.OUTLINE,
+    },
 };
 
 export const OutlineSizeL: Story = {
@@ -41,13 +47,12 @@ export const OutlineSizeL: Story = {
 };
 
 export const OutlineSizeXL: Story = {
-  args: {
-      children: 'Text',
-      theme: ButtonTheme.OUTLINE,
-      size: ButtonSize.XL,
-  },
+    args: {
+        children: 'Text',
+        theme: ButtonTheme.OUTLINE,
+        size: ButtonSize.XL,
+    },
 };
-
 
 export const OutlineDark: Story = {
     args: {

@@ -1,9 +1,10 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import styles from './Button.module.scss';
 import { ButtonHTMLAttributes, FC } from 'react';
+import styles from './Button.module.scss';
 
 export enum ButtonTheme {
     CLEAR = 'clear',
+    CLEAR_INVERTED = 'clearInverted',
     OUTLINE = 'outline',
     BACKGROUND = 'background',
     BACKGROUND_IVERTED = 'backgroundInverted',
@@ -23,7 +24,14 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const Button: FC<ButtonProps> = (props) => {
-    const { size = ButtonSize.M, className, children, theme, square, ...otherProps } = props;
+    const {
+        size = ButtonSize.M,
+        className,
+        children,
+        theme,
+        square,
+        ...otherProps
+    } = props;
 
     const mods: Record<string, boolean> = {
         [styles[theme]]: true,
