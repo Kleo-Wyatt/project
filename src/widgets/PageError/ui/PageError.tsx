@@ -4,13 +4,14 @@ import { Button } from 'shared/ui/Button/Button';
 import styles from './PageError.module.scss';
 
 interface PageErrorProps {
-  className?: string
+    className?: string;
 }
 
 export const PageError = ({ className }: PageErrorProps) => {
     const { t } = useTranslation();
 
     const reloadPage = () => {
+        // eslint-disable-next-line no-restricted-globals
         location.reload();
     };
     return (
