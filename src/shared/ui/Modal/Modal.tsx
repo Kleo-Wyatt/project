@@ -20,13 +20,14 @@ interface ModalProps {
 const ANIMATION_DELAY = 300;
 
 export const Modal = (props: ModalProps) => {
-    const { className, children, isOpen, onClose } = props;
-   
+    const {
+        className, children, isOpen, onClose,
+    } = props;
 
     const [isClosing, setIsClosing] = useState(false);
     const timeRef = useRef<ReturnType<typeof setTimeout>>();
     const { theme } = useTheme();
-    console.log(theme);
+
     const closeHandler = useCallback(() => {
         if (onClose) {
             setIsClosing(true);

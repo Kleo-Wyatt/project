@@ -1,4 +1,3 @@
-import { AppRouter } from 'app/providers/router';
 import React, { ErrorInfo, ReactNode, Suspense } from 'react';
 import { PageError } from 'widgets/PageError/ui/PageError';
 
