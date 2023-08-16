@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 // Компонент для тестирования ErrorBoundary
 export const BugButton = () => {
     const [error, setError] = useState(false);
-    const { t } = useTranslation();
+    // const { t } = useTranslation();
 
     const onThrow = () => setError(true);
 
@@ -20,7 +20,7 @@ export const BugButton = () => {
             theme={ButtonTheme.OUTLINE}
             onClick={onThrow}
         >
-            {t('throw error')}
+            throw error
         </Button>
     );
 };
