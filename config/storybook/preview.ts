@@ -2,9 +2,9 @@ import type { Preview } from '@storybook/react';
 import { StyleDecorator } from '../../src/shared/config/storybook/StyleDecorator/StyleDecorator';
 import { ThemeDecorator } from '../../src/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { RouterDecorator } from '../../src/shared/config/storybook/RouterDecorator/RouterDecorator';
+// import { TranslationDecorator } from '../../src/shared/config/storybook/TranslationDecorator/TranslationDecorator';
 import { Theme } from '../../src/app/providers/ThemeProvider';
 
-console.log(StyleDecorator);
 const preview: Preview = {
     parameters: {
         actions: { argTypesRegex: '^on[A-Z].*' },
@@ -16,7 +16,12 @@ const preview: Preview = {
         },
     },
 
-    decorators: [StyleDecorator, ThemeDecorator(Theme.LIGHT), RouterDecorator],
+    decorators: [
+        StyleDecorator,
+        // TranslationDecorator,
+        ThemeDecorator(Theme.LIGHT),
+        RouterDecorator,
+    ],
 };
 
 export default preview;

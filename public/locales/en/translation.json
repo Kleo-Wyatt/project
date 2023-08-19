@@ -8,6 +8,9 @@
   "Главная": "Main",
   "Яз": "En",
   "Войти": "Login",
+  "Выйти": "Exit",
   "Введите логин": "Login",
-  "Введите пароль": "Password"
+  "Введите пароль": "Password",
+  "Форма авторизации": "Login form",
+  "Вы ввели неверный логин или пароль": "You entered an incorrect username or password"
 }
