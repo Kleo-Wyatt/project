@@ -15,7 +15,8 @@
     // esModuleInterop позволяет работать с пакетами, которые используют
     // common js как с обычными пакетами с помощью import (require() module.export) = common js
     // "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "types": [ "node" ]
   },
   "ts-node": {
     "compilerOptions": {
@@ -23,5 +24,6 @@
       "esModuleInterop": true,
     }
   },
-  "include": ["./config/jest/setupTests.ts", "./src/**/*.ts", "./src/**/*.tsx"]
+  "include": ["./config/jest/setupTests.ts", "./src/**/*.ts", "./src/**/*.tsx"],
+  "types": [ "node" ]
 }
