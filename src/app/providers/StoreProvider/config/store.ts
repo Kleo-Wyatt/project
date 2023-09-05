@@ -1,7 +1,4 @@
-import {
-    ReducersMapObject,
-    configureStore,
-} from '@reduxjs/toolkit';
+import { ReducersMapObject, configureStore } from '@reduxjs/toolkit';
 // import { counterReducer } from 'entities/Counter';
 // import { userReducer } from 'entities/User'; -  важно
 import { userReducer } from '../../../../entities/User';
@@ -31,3 +28,5 @@ export function createReduxStore(
 
     return store;
 }
+
+export type AppDispatch = ReturnType<typeof createReduxStore>['dispatch'];

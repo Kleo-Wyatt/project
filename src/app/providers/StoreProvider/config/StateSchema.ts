@@ -13,6 +13,7 @@ import {
     Reducer,
     ReducersMapObject,
 } from '@reduxjs/toolkit';
+import { ProfileSchema } from 'entities/Profile';
 
 export interface StateSchema {
     // counter: CounterSchema;
@@ -20,6 +21,7 @@ export interface StateSchema {
 
     // Асинхронные редьюсеры
     loginForm?: LoginSchema;
+    profile?: ProfileSchema;
 }
 export type StateSchemaKey = keyof StateSchema;
 
