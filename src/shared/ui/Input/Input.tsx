@@ -1,4 +1,3 @@
-import { classNames } from 'shared/lib/classNames/classNames';
 import React, {
     InputHTMLAttributes,
     memo,
@@ -6,6 +5,7 @@ import React, {
     useRef,
     useState,
 } from 'react';
+import { classNames } from 'shared/lib/classNames/classNames';
 import styles from './Input.module.scss';
 
 type HTMLInputProps = Omit<
@@ -37,13 +37,13 @@ export const Input = memo((props: InputProps) => {
     useEffect(() => {
         if (autofocus) {
             setIsFocused(true);
-            ref.current.focus();
+            ref.current?.focus();
         }
     }, [autofocus]);
 
     const onChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
         onChange?.(event.target.value);
-        setCarriagePosition(event?.target?.selectionStart);
+        setCarriagePosition(event?.target.value.length);
     };
 
     const onBlur = () => {

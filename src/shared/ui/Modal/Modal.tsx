@@ -1,14 +1,15 @@
-import { classNames } from 'shared/lib/classNames/classNames';
+import { useTheme } from 'app/providers/ThemeProvider';
 import React, {
+    MutableRefObject,
     ReactNode,
     useCallback,
     useEffect,
     useRef,
     useState,
 } from 'react';
-import { useTheme } from 'app/providers/ThemeProvider';
-import styles from './Modal.module.scss';
+import { Mods, classNames } from 'shared/lib/classNames/classNames';
 import { Portal } from '../Portal/Portal';
+import styles from './Modal.module.scss';
 
 interface ModalProps {
     className?: string;
@@ -25,7 +26,7 @@ export const Modal = (props: ModalProps) => {
 
     const [isClosing, setIsClosing] = useState(false);
     const [isMounted, setIsMounted] = useState(false);
-    const timeRef = useRef<ReturnType<typeof setTimeout>>();
+    const timeRef = useRef() as MutableRefObject<ReturnType<typeof setTimeout>>;
     const { theme } = useTheme();
 
     useEffect(() => {
@@ -67,7 +68,7 @@ export const Modal = (props: ModalProps) => {
         };
     }, [isOpen, onKeyDown]);
 
-    const mods: Record<string, boolean> = {
+    const mods: Mods = {
         [styles.opened]: isOpen,
         [styles.isClosing]: isClosing,
     };

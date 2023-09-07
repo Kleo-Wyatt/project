@@ -1,11 +1,3 @@
-// export interface CounterState {
-//     value: number;
-// }
-
-// import { CounterSchema } from 'entities/Counter';
-
-import { LoginSchema } from 'features/AuthByUsername';
-import { UserSchema } from 'entities/User';
 import {
     AnyAction,
     CombinedState,
@@ -13,7 +5,12 @@ import {
     Reducer,
     ReducersMapObject,
 } from '@reduxjs/toolkit';
+import { To } from '@remix-run/router';
+import { AxiosInstance } from 'axios';
 import { ProfileSchema } from 'entities/Profile';
+import { UserSchema } from 'entities/User';
+import { LoginSchema } from 'features/AuthByUsername';
+import { NavigateOptions } from 'react-router';
 
 export interface StateSchema {
     // counter: CounterSchema;
@@ -37,4 +34,14 @@ export interface ReducerManager {
 
 export interface ReduxStoreWithManager extends EnhancedStore<StateSchema> {
     reducerManager: ReducerManager;
+}
+
+export interface ThunkExtraArg {
+    api: AxiosInstance;
+    navigate?: (to: To, options?: NavigateOptions) => void;
+}
+
+export interface ThunkConfig<T> {
+    rejectValue: T;
+    extra: ThunkExtraArg;
 }
