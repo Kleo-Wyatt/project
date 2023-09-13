@@ -7,13 +7,13 @@ import {
 } from '@reduxjs/toolkit';
 import { To } from '@remix-run/router';
 import { AxiosInstance } from 'axios';
-import { ProfileSchema } from 'entities/Profile';
+
 import { UserSchema } from 'entities/User';
 import { LoginSchema } from 'features/AuthByUsername';
+import { ProfileSchema } from 'pages/ProfilePage/model';
 import { NavigateOptions } from 'react-router';
 
 export interface StateSchema {
-    // counter: CounterSchema;
     user: UserSchema;
 
     // Асинхронные редьюсеры
@@ -44,4 +44,5 @@ export interface ThunkExtraArg {
 export interface ThunkConfig<T> {
     rejectValue: T;
     extra: ThunkExtraArg;
+    state: StateSchema;
 }

@@ -1,38 +1,38 @@
 {
-    "posts": [
-        {
-            "id": "1",
-            "title": "json-server",
-            "userId": 1
-        },
-        {
-            "id": "2",
-            "title": "json-server",
-            "userId": 2
-        }
-    ],
-    "comments": [
-        {
-            "id": "1",
-            "body": "some comment",
-            "postId": 1
-        }
-    ],
-    "users": [
-        {
-            "id": "1",
-            "username": "admin",
-            "password": "123"
-        }
-    ],
-    "profile": {
-        "first": "Виктория",
-        "lastname": "Ильченко",
-        "age": 31,
-        "currency": "RUB",
-        "country": "Russia",
-        "city": "Moscow",
-        "username": "Nestea",
-        "avatar": "https://sun9-56.userapi.com/impg/LsJ9HD0-mOhWrOxKBI0iLFobxPXXC7jdtD6bRA/LfLfJpzFOaQ.jpg?size=491x412&quality=96&sign=5dacd31693639cd8be509857dbb73b68&type=album"
+  "posts": [
+    {
+      "id": "1",
+      "title": "json-server",
+      "userId": 1
+    },
+    {
+      "id": "2",
+      "title": "json-server",
+      "userId": 2
     }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "123"
+    }
+  ],
+  "profile": {
+    "first": "Виктория",
+    "lastname": "Ильченко",
+    "age": 31,
+    "currency": "RUB",
+    "country": "Russia",
+    "city": "Москва",
+    "username": "Nestea",
+    "avatar": "https://sun9-56.userapi.com/impg/LsJ9HD0-mOhWrOxKBI0iLFobxPXXC7jdtD6bRA/LfLfJpzFOaQ.jpg?size=491x412&quality=96&sign=5dacd31693639cd8be509857dbb73b68&type=album"
+  }
 }
