@@ -24,16 +24,15 @@ export const Select = memo((props: SelectProps) => {
     };
 
     const optionsList = useMemo(
-        () =>
-            options?.map((element) => (
-                <option
-                    className={styles.option}
-                    value={element.value}
-                    key={element.value}
-                >
-                    {element.content}
-                </option>
-            )),
+        () => options?.map((element) => (
+            <option
+                className={styles.option}
+                value={element.value}
+                key={element.value}
+            >
+                {element.content}
+            </option>
+        )),
         [options],
     );
 

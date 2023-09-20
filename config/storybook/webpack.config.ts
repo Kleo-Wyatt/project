@@ -23,10 +23,10 @@ export default ({ config }: { config: webpack.Configuration }) => {
         return rule;
     });
 
-    // config!.module!.rules.push({
-    //     exclude: /node_modules/,
-    //     test: /\.(jsx?|tsx?)$/,
-    // });
+    config!.module!.rules.push({
+        exclude: /node_modules/,
+        test: /\.(jsx?|tsx?)$/,
+    });
 
     config!.module!.rules.push({
         test: /\.svg$/,
@@ -38,6 +38,7 @@ export default ({ config }: { config: webpack.Configuration }) => {
         new DefinePlugin({
             __IS_DEV__: JSON.stringify(true),
             __API__: JSON.stringify(''),
+            __PROJECT__: JSON.stringify('storybook'),
         }),
     );
 

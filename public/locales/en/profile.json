@@ -2,10 +2,14 @@
     "Профиль": "Profile",
     "Редактировать": "Edit",
     "Ваше имя": "Your name",
-    "Ваша фамилия":"Your lastname",
-    "Ваш возраст":"Your age",
-    "Город":"City",
+    "Ваша фамилия": "Your lastname",
+    "Ваш возраст": "Your age",
+    "Город": "City",
     "Отменить": "Cancel",
     "Сохранить": "Save",
-    "Имя пользователя": "Username"
+    "Имя пользователя": "Username",
+    "Серверная ошибка при сохранении": "Server error on saving",
+    "Имя и фамилия обязательны": "First and last name are required",
+    "Данные не указаны": "Data not specified",
+    "Некорректный возраст": "Incorrect age"
 }

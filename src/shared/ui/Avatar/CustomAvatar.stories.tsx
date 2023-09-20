@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import avatar from 'shared/assets/tests/storybook.png';
 import { CustomAvatar } from './CustomAvatar';
-import AvatarImg from './storybook.png';
 
 const meta: Meta<typeof CustomAvatar> = {
     title: 'shared/CustomAvatar',
@@ -13,13 +13,13 @@ type Story = StoryObj<typeof CustomAvatar>;
 export const Primary: Story = {
     args: {
         size: 150,
-        src: AvatarImg,
+        src: avatar,
     },
 };
 
 export const Small: Story = {
     args: {
         size: 50,
-        src: AvatarImg,
+        src: avatar,
     },
 };

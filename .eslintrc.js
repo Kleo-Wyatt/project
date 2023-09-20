@@ -4,11 +4,7 @@ module.exports = {
         es2021: true,
         jest: true,
     },
-    extends: [
-        'plugin:react/recommended',
-        'airbnb',
-        'plugin:storybook/recommended',
-    ],
+    extends: ['plugin:react/recommended', 'airbnb', 'plugin:storybook/recommended'],
     // overrides: [
     //     {
     //         env: {
@@ -57,7 +53,7 @@ module.exports = {
             'error',
             {
                 ignoreComments: true,
-                code: 100,
+                code: 120,
             },
         ],
         'jsx-a11y/no-static-element-interactions': 'off',
@@ -72,6 +68,7 @@ module.exports = {
     globals: {
         __IS_DEV__: true,
         __API__: true,
+        __PROJECT__: true,
     },
     overrides: [
         {
